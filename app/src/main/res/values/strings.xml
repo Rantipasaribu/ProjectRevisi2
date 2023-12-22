@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Project Mobile</string>
+    <string name="judul">Berita</string>
+    <string name="nama">Berita</string>
+    <string name="contoh_nama">Berita Penduduk Miskin</string>
+    <string name="detail">Detail Berita</string>
+    <string name="judul_utama">Berita Penduduk Miskin</string>
+</resources>
