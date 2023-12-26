@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    android:background="@color/white">
+    app:cardCornerRadius="2dp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="false">
 
-    <TextView
-        android:id="@+id/judul_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Berita Penduduk Miskin"
-        android:textSize="25sp"
-        android:textStyle="bold" />
 
 
     <RelativeLayout
-        android:id="@+id/klik_home"
+        android:id="@+id/rl_klik_list_berita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:focusable="true"
         android:foreground="?selectableItemBackground">
 
+
+
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/gambar_home"
+            android:id="@+id/gambar_berita"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
@@ -36,29 +29,29 @@
             android:src="@mipmap/ic_launcher" />
 
         <TextView
-            android:id="@+id/nm_berita"
+            android:id="@+id/nama_berita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
-            android:layout_toEndOf="@+id/gambar_home"
-            android:text="@string/judul"
+            android:layout_toEndOf="@+id/gambar_berita"
+            android:text="@string/contoh_nama_berita"
             android:textColor="#000000"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/detail_brt"
+            android:id="@+id/detail_berita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nm_berita"
+            android:layout_below="@+id/nama_berita"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_toEndOf="@+id/gambar_home"
-            android:text="@string/detail"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/gambar_berita"
+            android:text="@string/detail_berita"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="14sp"/>
     </RelativeLayout>
 
 
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
