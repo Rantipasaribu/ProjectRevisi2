@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             val spacingAtas = DekorasiSpasiGambar(20)
             addItemDecoration(spacingAtas)
             beritaAdapter = BeritaRecylcerAdapter()
-            adapter = beritaAdapter
+            adapter = beritaAdapteruhii
         }
     }
 
