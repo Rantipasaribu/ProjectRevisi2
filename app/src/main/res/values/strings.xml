@@ -5,4 +5,9 @@
     <string name="detail_berita">Detail Berita</string>
     <string name="judul_utama">List Berita Penduduk Miskin</string>
     <string name="contoh_nama_berita">Kemiskinan</string>
+    <string name="username_login">Username</string>
+    <string name="password_login">Password</string>
+    <string name="tombol_login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

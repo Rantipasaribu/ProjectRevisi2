@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/login_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Login Administrator"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/welcome_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_admin"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome To OGI"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/email_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_admin"
+        android:layout_marginTop="114dp"
+        android:hint="Email"
+        android:textColor="#ADA4A5"/>
+
+    <EditText
+        android:id="@+id/password_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_admin"
+        android:layout_marginTop="8dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#ADA4A5"/>
+
+    <Button
+        android:id="@+id/lupa_pswd_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_admin"
+        android:layout_marginTop="8dp"
+        android:text="Lupa Password"
+        android:textColor="#ADA4A5"
+        android:backgroundTint="@color/white"
+        android:textSize="15dp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/btnLoginAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lupa_pswd_admin"
+        android:layout_marginTop="270dp"
+        android:backgroundTint="#D2D2AE"
+        android:text="Masuk" />
+
+</RelativeLayout>
