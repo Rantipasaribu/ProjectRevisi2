@@ -11,14 +11,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.projectrevisi.databinding.FragmentHomeBinding
+import com.example.projectrevisi.databinding.LayoutListBeritaBinding
 
 class BeritaRecylcerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     private var items : List<ListObjBerita> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeritaViewHolder {
-        val binding = FragmentHomeBinding.inflate(LayoutInflater.from(parent.context),
+        val binding = LayoutListBeritaBinding.inflate(LayoutInflater.from(parent.context),
             parent, false)
 
         return BeritaViewHolder(binding)
@@ -42,7 +42,7 @@ class BeritaRecylcerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         return items.size
     }
 
-    class BeritaViewHolder constructor(val binding: FragmentHomeBinding) :
+    class BeritaViewHolder constructor(val binding: LayoutListBeritaBinding) :
             RecyclerView.ViewHolder(binding.root) {
 
         val foto_berita: ImageView = binding.gambarBerita

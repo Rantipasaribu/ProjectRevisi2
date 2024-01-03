@@ -18,21 +18,22 @@
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".HalamanRegistrasi"
+            android:name=".akun.HalamanLogin"
             android:exported="false" />
         <activity
-            android:name=".HalamanLogin"
+            android:name=".akun.HalamanRegistrasi"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetilBerita" />
+        <activity android:name=".DetilBerita"
+            android:exported="true"/>
     </application>
 
 </manifest>

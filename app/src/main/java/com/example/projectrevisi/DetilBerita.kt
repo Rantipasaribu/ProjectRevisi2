@@ -5,15 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.projectrevisi.databinding.ActivityMainBinding
-import com.example.projectrevisi.databinding.FragmentDetilBeritaBinding
+import com.example.projectrevisi.databinding.DetilBeritaBinding
 
 class DetilBerita : AppCompatActivity() {
 
-    private lateinit var binding: FragmentDetilBeritaBinding
+    private lateinit var binding: DetilBeritaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentDetilBeritaBinding.inflate(layoutInflater)
+        binding = DetilBeritaBinding.inflate(layoutInflater)
         val view = binding.root
 
         if (intent.hasExtra("namanya")) {
@@ -23,7 +23,7 @@ class DetilBerita : AppCompatActivity() {
         }
     }
 
-     fun setDetil(foto: String, nama: String) {
+    fun setDetil(foto: String, nama: String) {
         val requesOp = RequestOptions()
             .placeholder(R.drawable.ic_launcher_background)
             .error(R.drawable.ic_launcher_background)

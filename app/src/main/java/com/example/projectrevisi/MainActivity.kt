@@ -12,6 +12,30 @@ class MainActivity : AppCompatActivity() {
     private lateinit var beritaAdapter: BeritaRecylcerAdapter
     private lateinit var binding : ActivityMainBinding
 
+    private fun initRecyclerView() {
+        binding.recylerView.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            val spacingAtas = DekorasiSpasiGambar(20)
+            addItemDecoration(spacingAtas)
+            beritaAdapter = BeritaRecylcerAdapter()
+            adapter = beritaAdapter
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.commit()
+    }
+    private fun tambahDataSet(){
+        val data = SumberBerita.buatSetData()
+        beritaAdapter.submitList(data)
+
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -35,30 +59,7 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
-    }
 
-    private fun replaceFragment(fragment: Fragment) {
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-        fragmentTransaction.commit()
-    }
-
-    private fun tambahDataSet(){
-        val data = SumberBerita.buatSetData()
-        beritaAdapter.submitList(data)
-
-    }
-
-    private fun initRecyclerView() {
-        binding.recylerView.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            val spacingAtas = DekorasiSpasiGambar(20)
-            addItemDecoration(spacingAtas)
-            beritaAdapter = BeritaRecylcerAdapter()
-            adapter = beritaAdapter
-        }
     }
 
 }
