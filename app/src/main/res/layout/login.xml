@@ -27,6 +27,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+
     <EditText
         android:id="@+id/email_admin"
         android:layout_width="match_parent"
@@ -47,24 +48,24 @@
         android:textColor="#ADA4A5"/>
 
     <Button
-        android:id="@+id/lupa_pswd_admin"
+        android:id="@+id/btnRegistrasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_admin"
         android:layout_marginTop="8dp"
-        android:text="Lupa Password"
+        android:text="Buat Akun Disini"
         android:textColor="#ADA4A5"
         android:backgroundTint="@color/white"
         android:textSize="15dp"
         android:enabled="false"/>
 
     <Button
-        android:id="@+id/btnLoginAdmin"
+        android:id="@+id/btnLoginRegis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lupa_pswd_admin"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="#D2D2AE"
         android:text="Masuk" />
+
 
 </RelativeLayout>
