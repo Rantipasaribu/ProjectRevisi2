@@ -1,28 +1,35 @@
 package com.example.projectrevisi.akun
 
-
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projectrevisi.databinding.RegistrasiBinding
 
-class HalamanRegistrasi :AppCompatActivity() {
+class HalamanRegistrasi : AppCompatActivity() {
     private lateinit var binding: RegistrasiBinding
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = RegistrasiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.regBtn.setOnClickListener {
-            val nama = binding.regNama.getText().toString()
-            val username = binding.regUsername.getText().toString()
-            val pass = binding.regPass.getText().toString()
+        sharedPreferences = getSharedPreferences("AkunData", Context.MODE_PRIVATE)
 
-            val intent = Intent(this,HalamanLogin::class.java)
-            intent.putExtra("Nama", nama)
-            intent.putExtra("Username", username)
-            intent.putExtra("Pass", pass)
+        binding.regBtn.setOnClickListener {
+            val username = binding.regUsername.text.toString()
+            val pass = binding.regPass.text.toString()
+
+            // Simpan data akun ke SharedPreferences
+            with(sharedPreferences.edit()) {
+                putString("Username", username)
+                putString("Pass", pass)
+                apply()
+            }
+
+            val intent = Intent(this, HalamanLogin::class.java)
             startActivity(intent)
         }
     }

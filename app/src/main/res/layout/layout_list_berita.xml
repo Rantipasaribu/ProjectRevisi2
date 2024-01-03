@@ -46,7 +46,10 @@
             android:layout_toEndOf="@+id/gambar_berita"
             android:text="@string/detail_berita"
             android:textColor="#000"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"/>
     </RelativeLayout>
 
 

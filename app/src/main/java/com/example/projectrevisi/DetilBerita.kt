@@ -15,24 +15,28 @@ class DetilBerita : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DetilBeritaBinding.inflate(layoutInflater)
         val view = binding.root
+        setContentView(view)
 
-        if (intent.hasExtra("namanya")) {
+        if (intent.hasExtra("namanya") && intent.hasExtra("detailnya")) {
             val nama: String = intent.getStringExtra("namanya").toString()
+            val detail: String = intent.getStringExtra("detailnya").toString()
             val foto: String = intent.getStringExtra("fotonya").toString()
-            setDetil(foto, nama)
+            setDetil(foto, nama, detail)
         }
     }
 
-    fun setDetil(foto: String, nama: String) {
+    fun setDetil(foto: String, nama:String, detail:String) {
         val requesOp = RequestOptions()
             .placeholder(R.drawable.ic_launcher_background)
             .error(R.drawable.ic_launcher_background)
 
-        binding.namaDetilBerita.text = nama
+        binding.namaDetilBerita.text = detail
         Glide.with(this)
             .load(foto)
             .apply(requesOp)
             .centerCrop()
             .into(binding.fotoDetilBerita)
     }
+
+
 }
