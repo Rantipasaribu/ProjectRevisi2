@@ -1,71 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/login_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewJudul1"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
         android:text="Login Administrator"
-        android:textSize="18sp" />
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcome_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_admin"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewJudul2"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
         android:text="Welcome To OGI"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-
-    <EditText
-        android:id="@+id/email_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_admin"
-        android:layout_marginTop="114dp"
-        android:hint="Email"
-        android:textColor="#ADA4A5"/>
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/email_admin"
-        android:layout_marginTop="8dp"
-        android:hint="Password"
+        android:id="@+id/logUsername"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="90dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:hint="Masukkan Username Anda"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewJudul2" />
+
+    <EditText
+        android:id="@+id/logPass"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:hint="Masukkan Password Anda"
+        android:paddingLeft="20dp"
         android:inputType="textPassword"
-        android:textColor="#ADA4A5"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logUsername" />
 
     <Button
-        android:id="@+id/btnRegistrasi"
-        android:layout_width="wrap_content"
+        android:id="@+id/logBtn"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_admin"
-        android:layout_marginTop="8dp"
-        android:text="Buat Akun Disini"
-        android:textColor="#ADA4A5"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        android:enabled="false"/>
-
-    <Button
-        android:id="@+id/btnLoginRegis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#D2D2AE"
-        android:text="Masuk" />
+        android:text="Login"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPass" />
 
-
-</RelativeLayout>
+    <Button
+        android:id="@+id/logRegis"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#D2D2AE"
+        android:text="Registrasi"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

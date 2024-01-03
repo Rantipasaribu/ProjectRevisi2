@@ -21,11 +21,11 @@ class HalamanLogin: AppCompatActivity(){
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnRegistrasi.setOnClickListener {
+        binding.logRegis.setOnClickListener {
             val intent = Intent(this,HalamanRegistrasi::class.java)
             startActivity(intent)
         }
-        binding.btnRegistrasi.setOnClickListener {
+        binding.logBtn.setOnClickListener {
             if(intent.hasExtra("nama")){
                 val nama: String = this.intent.getStringExtra("nama").toString()
                 val username: String = this.intent.getStringExtra("username").toString()
@@ -39,8 +39,8 @@ class HalamanLogin: AppCompatActivity(){
     }
     fun login(namaBaru:String, usernameBaru: String ,passBaru:String){
 
-        val username = binding.loginAdmin.getText().toString()
-        val pass = binding.passwordAdmin.getText().toString()
+        val username = binding.logUsername.getText().toString()
+        val pass = binding.logPass.getText().toString()
 
         if (username == usernameBaru) {
             if (passBaru == pass) {
