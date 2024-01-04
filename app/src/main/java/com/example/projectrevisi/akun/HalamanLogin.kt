@@ -25,6 +25,10 @@ class HalamanLogin : AppCompatActivity() {
             val intent = Intent(this, HalamanRegistrasi::class.java)
             startActivity(intent)
         }
+        binding.loginUser.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.logBtn.setOnClickListener {
             // Ambil data akun dari SharedPreferences
